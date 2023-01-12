@@ -1,0 +1,293 @@
+{
+   "collection":{
+      "info":{
+         "_postman_id":"0e4af878-14b8-48ec-a61b-f83fecdb1341",
+         "name":"Restful-booker API",
+         "schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+         "updatedAt":"2023-01-12T21:21:08.000Z"
+      },
+      "item":[
+         {
+            "name":"Auth - Create Token",
+            "id":"52693305-f403-4d29-9e42-ee6be4aaa189",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"POST",
+               "header":[
+                  
+               ],
+               "body":{
+                  "mode":"raw",
+                  "raw":"{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}",
+                  "options":{
+                     "raw":{
+                        "language":"json"
+                     }
+                  }
+               },
+               "url":{
+                  "raw":"{{base_Restfulb_url_environment}}",
+                  "host":[
+                     "{{base_Restfulb_url_environment}}"
+                  ]
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - GetBookinglds",
+            "id":"9d425809-220f-488c-aee2-e554b36ee8e4",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"GET",
+               "header":[
+                  
+               ],
+               "url":{
+                  "raw":"{{url}}/booking?firstname=anarosa&lastname=leite",
+                  "host":[
+                     "{{url}}"
+                  ],
+                  "path":[
+                     "booking"
+                  ],
+                  "query":[
+                     {
+                        "key":"firstname",
+                        "value":"anarosa"
+                     },
+                     {
+                        "key":"lastname",
+                        "value":"leite"
+                     }
+                  ]
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - GetBooking",
+            "id":"5e38709a-7599-4f06-a648-f25df012d3d5",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"GET",
+               "header":[
+                  
+               ],
+               "url":{
+                  "raw":"{{base_Restfulb_url_collection}}/booking/1",
+                  "host":[
+                     "{{base_Restfulb_url_collection}}"
+                  ],
+                  "path":[
+                     "booking",
+                     "1"
+                  ]
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - CreateBooking",
+            "id":"c04accea-da3c-4406-8b0b-69472861784b",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"POST",
+               "header":[
+                  
+               ],
+               "url":{
+                  "raw":""
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - UpdateBooking",
+            "id":"2c272b66-253f-42ad-b762-e07a351f3980",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"PUT",
+               "header":[
+                  
+               ],
+               "body":{
+                  "mode":"raw",
+                  "raw":"{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+                  "options":{
+                     "raw":{
+                        "language":"json"
+                     }
+                  }
+               },
+               "url":{
+                  "raw":"{{url}}/booking/1",
+                  "host":[
+                     "{{url}}"
+                  ],
+                  "path":[
+                     "booking",
+                     "1"
+                  ]
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - PartialUpdateBooking",
+            "id":"49a4fe72-7351-4700-9591-85a95dfa35ce",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"PATCH",
+               "header":[
+                  
+               ],
+               "body":{
+                  "mode":"raw",
+                  "raw":"{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+                  "options":{
+                     "raw":{
+                        "language":"json"
+                     }
+                  }
+               },
+               "url":{
+                  "raw":""
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - DeleteBooking",
+            "id":"ea79c160-4117-4551-b62b-41679ca747dc",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"DELETE",
+               "header":[
+                  
+               ],
+               "body":{
+                  "mode":"raw",
+                  "raw":"{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+                  "options":{
+                     "raw":{
+                        "language":"json"
+                     }
+                  }
+               },
+               "url":{
+                  "raw":""
+               }
+            },
+            "response":[
+               
+            ]
+         },
+         {
+            "name":"Booking - Ping - HealthCheck",
+            "id":"7dd8963d-0270-4942-95a6-6fcc66439710",
+            "protocolProfileBehavior":{
+               "disableBodyPruning":true
+            },
+            "request":{
+               "method":"GET",
+               "header":[
+                  
+               ],
+               "body":{
+                  "mode":"raw",
+                  "raw":"{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+                  "options":{
+                     "raw":{
+                        "language":"json"
+                     }
+                  }
+               },
+               "url":{
+                  "raw":""
+               }
+            },
+            "response":[
+               
+            ]
+         }
+      ],
+      "auth":{
+         "type":"apikey",
+         "apikey":[
+            {
+               "key":"value",
+               "value":"{{admin}}",
+               "type":"string"
+            },
+            {
+               "key":"key",
+               "value":"admin",
+               "type":"string"
+            }
+         ]
+      },
+      "event":[
+         {
+            "listen":"prerequest",
+            "script":{
+               "id":"f335939f-8b54-4873-9269-2dab583f20c0",
+               "type":"text/javascript",
+               "exec":[
+                  ""
+               ]
+            }
+         },
+         {
+            "listen":"test",
+            "script":{
+               "id":"0ce93cde-61f3-4b34-a7e1-4c8b1108e8a1",
+               "type":"text/javascript",
+               "exec":[
+                  ""
+               ]
+            }
+         }
+      ],
+      "variable":[
+         {
+            "id":"ef505689-6717-42df-abfe-24adcf58a0f1",
+            "key":"base_Restfulb_url_collection",
+            "value":"https://restful-booker.herokuapp.com/auth",
+            "type":"string"
+         },
+         {
+            "id":"296a974a-dfa3-49c9-a152-442090f53f69",
+            "key":"url ",
+            "value":"https://restful-booker.herokuapp.com",
+            "type":"string"
+         }
+      ]
+   }
+}
